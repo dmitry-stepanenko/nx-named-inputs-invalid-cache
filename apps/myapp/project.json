@@ -7,9 +7,12 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@nx/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "customWebpackConfig": {
+          "path": "apps/myapp/webpack.config.js"
+        },
         "outputPath": "dist/apps/myapp",
         "index": "apps/myapp/src/index.html",
         "main": "apps/myapp/src/main.ts",
